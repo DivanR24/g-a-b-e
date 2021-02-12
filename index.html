@@ -8,6 +8,7 @@
   <body>
     <button onclick="sendMessage()">Bully Everyone</button>
     <button onclick="NicolaiBad()">Bully Nicolai</button>
+    <button onclick="LawEnforcment()">Enforce the Law</button>
   </body>
 
   <script>
@@ -35,6 +36,20 @@
         username: "Gabriel Santos",
         avatar_url: "",
         content: "git gud <@682095348537360389>"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    function LawEnforcment() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/809875858298634250/Az__Ctp48skKN1rfn3MdtmW0rBomC6mHCGNA44UFbQnTL3Gjb4RWSSx4ERak0WrY0x27");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Gabriel Santos",
+        avatar_url: "",
+        content: "stop, you have violated the law"
       }
 
       request.send(JSON.stringify(params));
