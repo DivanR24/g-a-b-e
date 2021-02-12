@@ -6,11 +6,26 @@
     <title>Discord Webhook Tutorial</title>
   </head>
   <body>
-    <button onclick="sendMessage()">Send</button>
+    <button onclick="sendMessage()">Bully Everyone</button>
+    <button onclick="NicolaiBad()">Bully Nicolai</button>
   </body>
 
   <script>
     function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/809870522086981703/e4ghggQpUkaiTFF6dLGetA4zPB2cKpQxFZA8TJXn-gPNU-FOrzsnUi5sYeFw5dBwIHU7");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Gabriel Santos",
+        avatar_url: "",
+        content: "git gud m8"
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    function NicolaiBad() {
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/809870522086981703/e4ghggQpUkaiTFF6dLGetA4zPB2cKpQxFZA8TJXn-gPNU-FOrzsnUi5sYeFw5dBwIHU7");
 
