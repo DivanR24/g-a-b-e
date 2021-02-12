@@ -18,6 +18,11 @@
       <label for="message">Message:</label><br>
       <input type="text" id="message" name="message"><br>
     <button onclick="sendcustommessage()">Send</button>
+    <h2>custom sppalt</h2>
+    <form>
+      <label for="message2">Message:</label><br>
+      <input type="text" id="message2" name="message2"><br>
+    <button onclick="sendcustommessageprep2()">Send</button>
   </body>
 
   <script>
@@ -95,6 +100,21 @@
       var message = document.getElementById("message").value;
       var request = new XMLHttpRequest();
       request.open("POST", "https://discord.com/api/webhooks/809888591496609832/xEI7_pAmEFz2A9mkm3n-IN8nY02Q-jwPFBWIj0t2IcX2CaDnbvxB_j-Fb2Qq6TM3OQDh");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        username: "Gabriel Santos",
+        avatar_url: "",
+        content: message
+      }
+
+      request.send(JSON.stringify(params));
+    }
+    function sendcustommessageprep2() {
+      var message = document.getElementById("message2").value;
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discord.com/api/webhooks/809896511185354782/dMlwHT_KdJcMYd9lR6YKaQnzknhLMHPnzUmHvyNcqfI23S5W8l3r-ill9HWtfCBdyUcO");
 
       request.setRequestHeader('Content-type', 'application/json');
 
